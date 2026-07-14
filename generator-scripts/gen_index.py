@@ -1,0 +1,214 @@
+# -*- coding: utf-8 -*-
+import sys
+sys.path.insert(0, "/home/claude")
+from build_common import page
+
+ICONS = {
+  "sun": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke-linecap="round"/></svg>',
+  "book": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H12v16H5.5c-.8 0-1.5-.7-1.5-1.5v-13Z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H12v16h6.5c.8 0 1.5-.7 1.5-1.5v-13Z"/></svg>',
+  "hands": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11V6a2 2 0 1 1 4 0v5M11 11V4a2 2 0 1 1 4 0v7M15 11V6a2 2 0 1 1 4 0v6c0 4-3 7-7 7s-6-2-8-5l-1.5-2.3a1.6 1.6 0 0 1 2.6-1.8L7 12" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  "megaphone": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11v2a2 2 0 0 0 2 2h1l3 5V6l-3 5H5a2 2 0 0 0-2 2Z" stroke-linejoin="round"/><path d="M14 6a6 6 0 0 1 0 12M18 4a10 10 0 0 1 0 16" stroke-linecap="round"/></svg>',
+  "arrow": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+}
+
+BODY = f"""
+<section class="hero">
+  <div class="hero-media">
+    <img src="assets/images/calomue-distribuicao.jpg" alt="Equipa da AZEMAP junto ao Centro de Saúde de Calomué durante uma actividade de distribuição de protector solar" style="object-position:50% 25%;">
+  </div>
+  <div class="container hero-content">
+    <span class="hero-badge">
+      <span class="lang-pt">Desde 2015 · Tete, Moçambique</span>
+      <span class="lang-en">Since 2015 · Tete, Mozambique</span>
+    </span>
+    <h1>
+      <span class="lang-pt">Mais de 10 anos a defender a dignidade das Pessoas com Albinismo</span>
+      <span class="lang-en">Over 10 years defending the dignity of people with albinism</span>
+    </h1>
+    <p>
+      <span class="lang-pt">A AZEMAP trabalha pela saúde, educação, protecção, inclusão e defesa dos direitos das Pessoas com Albinismo em Tete e em Moçambique.</span>
+      <span class="lang-en">AZEMAP works to advance health, education, protection, inclusion and human rights for people with albinism in Tete and across Mozambique.</span>
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="apoie-nos.html"><span class="lang-pt">Apoie a nossa missão</span><span class="lang-en">Support our mission</span></a>
+      <a class="btn btn-ghost-light" href="trabalho.html"><span class="lang-pt">Conheça o nosso trabalho</span><span class="lang-en">See our work</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+      <div>
+        <p class="eyebrow"><span class="lang-pt">Quem somos</span><span class="lang-en">Who we are</span></p>
+        <h2><span class="lang-pt">Uma associação moçambicana ao serviço da dignidade</span><span class="lang-en">A Mozambican association serving dignity</span></h2>
+        <p class="max-prose">
+          <span class="lang-pt">A Associação Zé Manuel Pinto — AZEMAP é uma organização moçambicana dedicada à defesa dos direitos, saúde, educação, protecção e inclusão social das Pessoas com Albinismo. Desde 2015, trabalha junto das famílias, comunidades, escolas, unidades sanitárias e instituições públicas para combater a discriminação e promover uma vida com dignidade.</span>
+          <span class="lang-en">The Zé Manuel Pinto Association — AZEMAP is a Mozambican organisation dedicated to defending the rights, health, education, protection and social inclusion of people with albinism. Since 2015, it has worked with families, communities, schools, health units and public institutions to fight discrimination and promote a life of dignity.</span>
+        </p>
+        <a class="btn btn-outline" href="sobre.html"><span class="lang-pt">A nossa história</span><span class="lang-en">Our history</span> {ICONS['arrow']}</a>
+      </div>
+      <div class="rounded-photo">
+        <img src="assets/images/visita-domiciliaria.jpg" alt="Beneficiária da AZEMAP com uma criança, durante uma visita de acompanhamento familiar" style="object-position:50% 20%; aspect-ratio:4/5;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="grid grid-3">
+      <div class="card">
+        <p class="eyebrow"><span class="lang-pt">Missão</span><span class="lang-en">Mission</span></p>
+        <p><span class="lang-pt">Defender os direitos das Pessoas com Albinismo e promover saúde, educação, protecção, inclusão social e igualdade de oportunidades.</span><span class="lang-en">Defending the rights of people with albinism and promoting health, education, protection, social inclusion and equal opportunities.</span></p>
+      </div>
+      <div class="card">
+        <p class="eyebrow"><span class="lang-pt">Visão</span><span class="lang-en">Vision</span></p>
+        <p><span class="lang-pt">Uma sociedade inclusiva onde todas as Pessoas com Albinismo vivam com dignidade, segurança e participação plena.</span><span class="lang-en">An inclusive society where every person with albinism lives with dignity, safety and full participation.</span></p>
+      </div>
+      <div class="card">
+        <p class="eyebrow"><span class="lang-pt">Valores</span><span class="lang-en">Values</span></p>
+        <p><span class="lang-pt">Dignidade humana, igualdade, não discriminação, solidariedade, activismo e cooperação orientam cada actividade da AZEMAP.</span><span class="lang-en">Human dignity, equality, non-discrimination, solidarity, activism and cooperation guide everything AZEMAP does.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="text-center center-col" style="margin-bottom:40px;">
+      <p class="eyebrow" style="justify-content:center;"><span class="lang-pt">Áreas de intervenção</span><span class="lang-en">Programme areas</span></p>
+      <h2><span class="lang-pt">Quatro frentes de trabalho, um só objectivo</span><span class="lang-en">Four programme areas, one goal</span></h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card programme-card">
+        <div class="programme-icon">{ICONS['sun']}</div>
+        <h3><span class="lang-pt">Saúde e Protecção Solar</span><span class="lang-en">Health &amp; Sun Protection</span></h3>
+        <p><span class="lang-pt">Distribuição de protector solar, óculos e roupa de protecção, e acompanhamento dermatológico.</span><span class="lang-en">Sunscreen, sunglasses and protective clothing distribution, plus dermatological follow-up.</span></p>
+        <a class="card-link" href="trabalho.html#saude"><span class="lang-pt">Saber mais</span><span class="lang-en">Learn more</span> {ICONS['arrow']}</a>
+      </div>
+      <div class="card programme-card">
+        <div class="programme-icon">{ICONS['book']}</div>
+        <h3><span class="lang-pt">Educação Inclusiva</span><span class="lang-en">Inclusive Education</span></h3>
+        <p><span class="lang-pt">Material escolar, formação de professores e inclusão em sala de aula.</span><span class="lang-en">School materials, teacher training and classroom inclusion.</span></p>
+        <a class="card-link" href="trabalho.html#educacao"><span class="lang-pt">Saber mais</span><span class="lang-en">Learn more</span> {ICONS['arrow']}</a>
+      </div>
+      <div class="card programme-card">
+        <div class="programme-icon">{ICONS['hands']}</div>
+        <h3><span class="lang-pt">Apoio Social e Protecção</span><span class="lang-en">Social Support &amp; Protection</span></h3>
+        <p><span class="lang-pt">Visitas familiares, identificação de beneficiários e protecção contra a violência.</span><span class="lang-en">Family visits, beneficiary identification and protection from violence.</span></p>
+        <a class="card-link" href="trabalho.html#apoio-social"><span class="lang-pt">Saber mais</span><span class="lang-en">Learn more</span> {ICONS['arrow']}</a>
+      </div>
+      <div class="card programme-card">
+        <div class="programme-icon">{ICONS['megaphone']}</div>
+        <h3><span class="lang-pt">Advocacia e Direitos Humanos</span><span class="lang-en">Advocacy &amp; Human Rights</span></h3>
+        <p><span class="lang-pt">Campanhas contra a discriminação e representação dos interesses das Pessoas com Albinismo.</span><span class="lang-en">Anti-discrimination campaigns and representation of the interests of people with albinism.</span></p>
+        <a class="card-link" href="trabalho.html#advocacia"><span class="lang-pt">Saber mais</span><span class="lang-en">Learn more</span> {ICONS['arrow']}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-teal">
+  <div class="container">
+    <div class="grid grid-4">
+      <div class="stat-card"><span class="stat-number">10+</span><span class="stat-label"><span class="lang-pt">anos de trabalho</span><span class="lang-en">years of work</span></span></div>
+      <div class="stat-card"><span class="stat-number">4</span><span class="stat-label"><span class="lang-pt">áreas principais de intervenção</span><span class="lang-en">core programme areas</span></span></div>
+      <div class="stat-card"><span class="stat-number">30</span><span class="stat-label"><span class="lang-pt">pares de óculos entregues numa actividade documentada</span><span class="lang-en">pairs of glasses delivered in one documented activity</span></span></div>
+      <div class="stat-card"><span class="stat-number">1</span><span class="stat-label"><span class="lang-pt">província com presença activa: Tete</span><span class="lang-en">province with active presence: Tete</span></span></div>
+    </div>
+    <p class="text-center" style="font-size:.82rem; color:#9CC3B7; margin-top:10px;">
+      <span class="lang-pt">* Números verificados e documentados. A cobertura total dos distritos de Tete está ainda em processo de confirmação — ver <a href="transparencia.html" style="color:#F4C542;">Transparência</a>.</span>
+      <span class="lang-en">* Verified and documented figures. Full coverage across Tete's districts is still being confirmed — see <a href="transparencia.html" style="color:#F4C542;">Transparency</a>.</span>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="text-center center-col" style="margin-bottom:40px;">
+      <p class="eyebrow" style="justify-content:center;"><span class="lang-pt">No terreno</span><span class="lang-en">In the field</span></p>
+      <h2><span class="lang-pt">Histórias recentes de acompanhamento</span><span class="lang-en">Recent field stories</span></h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="card story-card">
+        <img src="assets/images/beneficiaria-protetor.jpg" alt="Beneficiária da AZEMAP recebendo protector solar, acompanhada pela família" style="object-position:50% 15%;">
+        <div class="story-body">
+          <p class="story-meta"><span class="lang-pt">Cidade de Tete · Saúde</span><span class="lang-en">Tete City · Health</span></p>
+          <h3><span class="lang-pt">Identificação e acompanhamento de uma nova beneficiária</span><span class="lang-en">Identifying and following up a new beneficiary</span></h3>
+          <p><span class="lang-pt">Durante uma actividade na Cidade de Tete, a equipa da AZEMAP identificou uma Pessoa com Albinismo que já havia recebido protector solar em ocasiões anteriores. O caso foi encaminhado para confirmação do registo e continuidade do acompanhamento.</span>
+          <span class="lang-en">During an activity in Tete City, the AZEMAP team identified a person with albinism who had already received sunscreen on previous occasions. The case was referred for registration confirmation and continued follow-up.</span></p>
+        </div>
+      </article>
+      <article class="card story-card">
+        <img src="assets/images/visita-domiciliaria.jpg" alt="Beneficiária com uma criança, segurando frascos de protector solar" style="object-position:50% 20%;">
+        <div class="story-body">
+          <p class="story-meta"><span class="lang-pt">Tete · Saúde</span><span class="lang-en">Tete · Health</span></p>
+          <h3><span class="lang-pt">O acompanhamento familiar faz a diferença</span><span class="lang-en">Family follow-up makes a difference</span></h3>
+          <p><span class="lang-pt">A utilização regular de protector solar, combinada com o apoio e compromisso das famílias, contribui para uma melhor protecção da pele das crianças com albinismo.</span>
+          <span class="lang-en">Regular sunscreen use, combined with families' support and commitment, contributes to better skin protection for children with albinism.</span></p>
+        </div>
+      </article>
+      <article class="card story-card">
+        <img src="assets/images/calomue-distribuicao.jpg" alt="Equipa da AZEMAP junto ao Centro de Saúde de Calomué" style="object-position:50% 15%;">
+        <div class="story-body">
+          <p class="story-meta"><span class="lang-pt">Calomué · Saúde</span><span class="lang-en">Calomué · Health</span></p>
+          <h3><span class="lang-pt">Distribuição de protector solar em Calomué</span><span class="lang-en">Sunscreen distribution in Calomué</span></h3>
+          <p><span class="lang-pt">A equipa da AZEMAP deslocou-se ao Centro de Saúde de Calomué para entregar protector solar aos beneficiários e reforçar o acompanhamento local.</span>
+          <span class="lang-en">The AZEMAP team travelled to the Calomué Health Centre to deliver sunscreen to beneficiaries and strengthen local follow-up.</span></p>
+        </div>
+      </article>
+    </div>
+    <div class="text-center" style="margin-top:34px;">
+      <a class="btn btn-outline" href="historias.html"><span class="lang-pt">Ver todas as histórias</span><span class="lang-en">See all stories</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container text-center">
+    <p class="eyebrow" style="justify-content:center;"><span class="lang-pt">Parceiros</span><span class="lang-en">Partners</span></p>
+    <h2><span class="lang-pt">Organizações que caminham connosco</span><span class="lang-en">Organisations walking with us</span></h2>
+    <div class="grid grid-4" style="margin-top:30px;">
+      <div class="card partner-card">Africa Directo</div>
+      <div class="card partner-card"><span class="lang-pt">Serviços Provinciais de Saúde de Tete</span><span class="lang-en">Tete Provincial Health Services</span></div>
+      <div class="card partner-card">Africa Albinism Network</div>
+      <div class="card partner-card">Human Rights Watch</div>
+    </div>
+    <p style="font-size:.85rem; margin-top:22px;">
+      <span class="lang-pt">A apresentação de uma organização nesta secção não implica necessariamente uma parceria actualmente activa. A lista será actualizada pela AZEMAP.</span>
+      <span class="lang-en">Listing an organisation here does not necessarily imply a currently active partnership. This list will be updated by AZEMAP.</span>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container text-center center-col">
+    <h2><span class="lang-pt">Juntos podemos proteger mais vidas</span><span class="lang-en">Together we can protect more lives</span></h2>
+    <p class="max-prose" style="margin:0 auto 30px;">
+      <span class="lang-pt">O seu apoio pode ajudar a disponibilizar protector solar, óculos, material escolar, acompanhamento médico e protecção social às Pessoas com Albinismo.</span>
+      <span class="lang-en">Your support can help provide sunscreen, glasses, school materials, medical follow-up and social protection to people with albinism.</span>
+    </p>
+    <div class="hero-actions" style="justify-content:center;">
+      <a class="btn btn-primary" href="apoie-nos.html"><span class="lang-pt">Fazer um donativo</span><span class="lang-en">Make a donation</span></a>
+      <a class="btn btn-outline" href="voluntariado.html"><span class="lang-pt">Tornar-me voluntário</span><span class="lang-en">Become a volunteer</span></a>
+      <a class="btn btn-outline" href="parceiros.html"><span class="lang-pt">Ser parceiro</span><span class="lang-en">Become a partner</span></a>
+    </div>
+  </div>
+</section>
+"""
+
+html = page(
+    title_pt="Início",
+    title_en="Home",
+    desc_pt="AZEMAP — Associação Zé Manuel Pinto. Mais de 10 anos a defender a saúde, educação, protecção e os direitos das Pessoas com Albinismo em Tete, Moçambique.",
+    desc_en="AZEMAP — Zé Manuel Pinto Association. Over 10 years defending health, education, protection and rights for people with albinism in Tete, Mozambique.",
+    canonical="index.html",
+    active_key="home",
+    body_html=BODY,
+)
+
+with open("/home/claude/azemap-site/index.html", "w", encoding="utf-8") as f:
+    f.write(html)
+
+print("index.html written:", len(html), "bytes")
