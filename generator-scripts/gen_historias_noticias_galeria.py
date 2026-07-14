@@ -95,7 +95,7 @@ html = page(
     desc_en="Real, dignified stories from AZEMAP's work with people with albinism in Tete, Mozambique.",
     canonical="historias.html", active_key="historias", body_html=HIST_BODY,
 )
-with open("/home/claude/azemap-site/historias.html", "w", encoding="utf-8") as f:
+with open("historias.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("historias.html written:", len(html))
 
@@ -143,7 +143,7 @@ html = page(
     desc_en="News, training, campaigns and events from AZEMAP in Tete, Mozambique.",
     canonical="noticias.html", active_key="noticias", body_html=NEWS_BODY,
 )
-with open("/home/claude/azemap-site/noticias.html", "w", encoding="utf-8") as f:
+with open("noticias.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("noticias.html written:", len(html))
 
@@ -217,6 +217,6 @@ html = page(
     desc_en="Field photographs of AZEMAP's work with people with albinism in Tete Province.",
     canonical="galeria.html", active_key="galeria", body_html=GAL_BODY,
 )
-with open("/home/claude/azemap-site/galeria.html", "w", encoding="utf-8") as f:
+with open("galeria.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("galeria.html written:", len(html))

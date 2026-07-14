@@ -121,7 +121,7 @@ html = page(
     desc_en="Explore ways to support AZEMAP: donations, sponsorships, partnerships and volunteering.",
     canonical="apoie-nos.html", active_key="apoio", body_html=APOIO_BODY,
 )
-with open("/home/claude/azemap-site/apoie-nos.html", "w", encoding="utf-8") as f:
+with open("apoie-nos.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("apoie-nos.html written:", len(html))
 
@@ -229,7 +229,7 @@ html = page(
     desc_en="Become an AZEMAP volunteer in health, education, communications, legal support and more.",
     canonical="voluntariado.html", active_key="apoio", body_html=VOL_BODY,
 )
-with open("/home/claude/azemap-site/voluntariado.html", "w", encoding="utf-8") as f:
+with open("voluntariado.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("voluntariado.html written:", len(html))
 
@@ -281,6 +281,6 @@ html = page(
     desc_en="Organisations and institutions collaborating with AZEMAP in support of people with albinism.",
     canonical="parceiros.html", active_key="parceiros", body_html=PART_BODY,
 )
-with open("/home/claude/azemap-site/parceiros.html", "w", encoding="utf-8") as f:
+with open("parceiros.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("parceiros.html written:", len(html))

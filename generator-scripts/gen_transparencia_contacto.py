@@ -3,7 +3,7 @@ import sys, os
 sys.path.insert(0, "/home/claude")
 from build_common import page
 
-pdf_size_bytes = os.path.getsize("/home/claude/azemap-site/assets/documents/BR-242-III-Serie-2018-AZEMAP.pdf")
+pdf_size_bytes = os.path.getsize("assets/documents/BR-242-III-Serie-2018-AZEMAP.pdf")
 pdf_size_mb = round(pdf_size_bytes / (1024*1024), 1)
 
 TRANS_BODY = f"""
@@ -97,7 +97,7 @@ html = page(
     desc_en="Legal recognition, statutes, governance and accountability for AZEMAP — Zé Manuel Pinto Association.",
     canonical="transparencia.html", active_key="transparencia", body_html=TRANS_BODY,
 )
-with open("/home/claude/azemap-site/transparencia.html", "w", encoding="utf-8") as f:
+with open("transparencia.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("transparencia.html written:", len(html))
 
@@ -211,6 +211,6 @@ html = page(
     desc_en="Contact AZEMAP by email, phone, WhatsApp, or via the contact form.",
     canonical="contacto.html", active_key="contacto", body_html=CONTACT_BODY,
 )
-with open("/home/claude/azemap-site/contacto.html", "w", encoding="utf-8") as f:
+with open("contacto.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("contacto.html written:", len(html))

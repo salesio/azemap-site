@@ -208,7 +208,7 @@ html = page(
     body_html=BODY,
 )
 
-with open("/home/claude/azemap-site/index.html", "w", encoding="utf-8") as f:
+with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
 
 print("index.html written:", len(html), "bytes")

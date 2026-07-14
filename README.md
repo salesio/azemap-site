@@ -71,23 +71,15 @@ ficheiro serve os dois idiomas.
 **Para editar um texto**: procure o texto em português dentro de `<span class="lang-pt">`, e
 a tradução correspondente logo a seguir em `<span class="lang-en">`.
 
-## 5. Logótipo
+## 5. Logótipo e identidade visual
 
-Ainda não foi fornecido o logótipo oficial em alta resolução. O site usa:
-1. Um logótipo temporário (SVG, inline no código, em `build_common.py` → `SVG_LOGO`), com um
-   símbolo simples inspirado em protecção solar e solidariedade — não é o logótipo oficial.
-2. Uma paleta de cores derivada da fita/emblema visível no ficheiro que enviou
-   (`assets/images/logo-temporario-ref.png`), combinada com as cores que já tinha definido
-   (laranja "esperança", amarelo "sol", creme e azul-claro).
+O site utiliza o logótipo oficial em `assets/images/azemap-logo.png` no cabeçalho, rodapé,
+favicon e metadados de partilha social. A paleta visual foi alinhada com o emblema: azul e
+azul-marinho como cores principais, com laranja, vermelho e amarelo nos destaques.
 
-**Quando tiver o logótipo oficial em alta resolução:**
-1. Guarde o ficheiro (idealmente `.svg` ou `.png` com fundo transparente) em
-   `assets/images/logo-oficial.svg` (ou `.png`).
-2. Em `build_common.py`, dentro da função `build_header`, substitua o bloco `SVG_LOGO` por:
-   `<img class="brand-mark" src="assets/images/logo-oficial.svg" alt="AZEMAP">`
-3. Corra todos os `gen_*.py` outra vez (ver secção 3) para actualizar as 15 páginas.
-
-Se preferir, posso fazer esta substituição por si assim que enviar o ficheiro do logótipo.
+Para substituir o ficheiro no futuro, mantenha o mesmo nome e proporção ou actualize a
+constante `OFFICIAL_LOGO` em `generator-scripts/build_common.py`, depois volte a executar os
+scripts `gen_*.py`.
 
 ## 6. Formulários (Contacto, Apoie-nos, Voluntariado)
 
@@ -115,7 +107,6 @@ Se quiser, posso implementar a ligação a qualquer um destes serviços assim qu
 Seguindo as suas instruções, o site **não inventa** nenhuma destas informações — estão
 marcadas como pendentes até serem fornecidas:
 
-- [ ] Logótipo oficial em alta resolução
 - [ ] Morada exacta do escritório (o site mostra apenas "Cidade de Tete" de forma aproximada)
 - [ ] Dados bancários / M-Pesa / e-Mola / PayPal para donativos
 - [ ] Confirmação da cobertura activa em todos os distritos de Tete

@@ -76,6 +76,6 @@ html = page(
     active_key="onde",
     body_html=BODY,
 )
-with open("/home/claude/azemap-site/onde-trabalhamos.html", "w", encoding="utf-8") as f:
+with open("onde-trabalhamos.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("onde-trabalhamos.html written:", len(html))

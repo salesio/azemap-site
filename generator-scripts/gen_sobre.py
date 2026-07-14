@@ -151,6 +151,6 @@ html = page(
     active_key="sobre",
     body_html=BODY,
 )
-with open("/home/claude/azemap-site/sobre.html", "w", encoding="utf-8") as f:
+with open("sobre.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("sobre.html written:", len(html))

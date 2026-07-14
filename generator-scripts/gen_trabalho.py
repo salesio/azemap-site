@@ -148,6 +148,6 @@ html = page(
     active_key="trabalho",
     body_html=BODY,
 )
-with open("/home/claude/azemap-site/trabalho.html", "w", encoding="utf-8") as f:
+with open("trabalho.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("trabalho.html written:", len(html))

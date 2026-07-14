@@ -46,7 +46,7 @@ html = page(
     desc_en="How AZEMAP collects, uses and protects personal data shared through this site.",
     canonical="privacidade.html", active_key="", body_html=PRIV_BODY,
 )
-with open("/home/claude/azemap-site/privacidade.html", "w", encoding="utf-8") as f:
+with open("privacidade.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("privacidade.html written:", len(html))
 
@@ -110,7 +110,7 @@ html = page(
     desc_en="The consent, child-protection and dignity principles that guide AZEMAP's use of imagery.",
     canonical="protecao-imagem.html", active_key="", body_html=SAFE_BODY,
 )
-with open("/home/claude/azemap-site/protecao-imagem.html", "w", encoding="utf-8") as f:
+with open("protecao-imagem.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("protecao-imagem.html written:", len(html))
 
@@ -137,6 +137,6 @@ html = page(
     desc_en="The page you're looking for could not be found on the AZEMAP site.",
     canonical="404.html", active_key="", body_html=NOTFOUND_BODY,
 )
-with open("/home/claude/azemap-site/404.html", "w", encoding="utf-8") as f:
+with open("404.html", "w", encoding="utf-8") as f:
     f.write(html)
 print("404.html written:", len(html))
