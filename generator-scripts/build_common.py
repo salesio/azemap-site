@@ -58,6 +58,7 @@ def build_header(active_key):
       <ul>
       {nav}
       </ul>
+      <a class="mobile-nav-cta" href="apoie-nos.html"><span class="lang-pt">Apoiar a missão</span><span class="lang-en">Support the mission</span><span aria-hidden="true">→</span></a>
     </nav>
     <div class="header-actions">
       <div class="lang-switch" data-lang-buttons>

@@ -64,11 +64,13 @@
     function closeNav() {
       nav.classList.remove("open");
       if (scrim) scrim.classList.remove("open");
+      document.body.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
     }
     function openNav() {
       nav.classList.add("open");
       if (scrim) scrim.classList.add("open");
+      document.body.classList.add("nav-open");
       toggle.setAttribute("aria-expanded", "true");
       var firstLink = nav.querySelector("a");
       if (firstLink) firstLink.focus();
