@@ -352,11 +352,8 @@ p{line-height:1.72;}
 .site-header.is-scrolled{background:rgba(255,255,255,.96); box-shadow:0 10px 34px rgba(6,58,89,.09);}
 .header-inner{max-width:1380px; min-height:80px; padding:8px 28px; gap:24px;}
 .brand{gap:9px; min-width:196px;}
-.brand-crop{width:64px; height:58px; display:block; overflow:hidden; position:relative; flex:0 0 auto;}
-.brand-crop .brand-mark{position:absolute; width:110px; height:62px; max-width:none; left:-23px; top:-2px; object-fit:cover; transform:scale(1.52);}
-.brand-wordmark{display:flex; flex-direction:column; line-height:1; color:var(--teal-900);}
-.brand-wordmark strong{font-size:1.02rem; letter-spacing:.08em;}
-.brand-wordmark small{font-family:var(--font-body); font-size:.61rem; font-weight:700; color:var(--ink-500); letter-spacing:.02em; margin-top:7px; white-space:nowrap;}
+.brand-logo-frame{width:142px; height:64px; display:flex; align-items:center; flex:0 0 auto;}
+.brand-logo-frame .brand-mark{width:142px; height:64px; object-fit:contain; mix-blend-mode:normal;}
 .main-nav{flex:1; justify-content:center; min-width:0;}
 .main-nav ul{gap:clamp(11px,1.25vw,22px); align-items:center;}
 .main-nav a{font-size:.84rem; white-space:nowrap; position:relative; padding:29px 0 27px;}
@@ -402,10 +399,8 @@ input:focus,select:focus,textarea:focus{background:#fff; box-shadow:0 0 0 4px rg
 .site-footer::before{content:""; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--orange-600),var(--yellow-500),#08A0D8,#D50B78);}
 .site-footer p{color:#BBD8E7;}
 .footer-grid{grid-template-columns:1.65fr repeat(3,1fr); gap:clamp(30px,5vw,72px);}
-.footer-brand-link{display:inline-flex; align-items:center; gap:12px; color:#fff!important; margin-bottom:17px;}
-.footer-brand-link strong{font-size:1.12rem; letter-spacing:.1em;}
-.footer-logo-crop{display:block; width:58px; height:58px; position:relative; overflow:hidden; border-radius:50%; background:#fff;}
-.footer-logo{position:absolute; width:104px; height:60px; max-width:none; left:-23px; top:-1px; object-fit:cover; transform:scale(1.48); margin:0; background:transparent; border-radius:0;}
+.footer-brand-link{display:inline-flex; align-items:center; color:#fff!important; margin-bottom:20px;}
+.footer-logo{position:static; width:226px; height:auto; max-height:142px; object-fit:contain; transform:none; margin:0; background:transparent; border-radius:0;}
 .footer-brand p{max-width:36ch; font-size:.9rem; margin-bottom:18px;}
 .footer-contact{display:inline-flex; gap:9px; align-items:center; font-weight:700; color:#fff!important;}
 .footer-contact span[aria-hidden="true"]{color:var(--yellow-500); transition:transform .2s ease;}
@@ -422,8 +417,8 @@ input:focus,select:focus,textarea:focus{background:#fff; box-shadow:0 0 0 4px rg
 .reveal-ready.reveal-in{opacity:1; transform:none;}
 
 @media (max-width:1180px){
-  .brand-wordmark{display:none;}
-  .brand{min-width:64px;}
+  .brand{min-width:132px;}
+  .brand-logo-frame,.brand-logo-frame .brand-mark{width:132px;}
   .main-nav ul{gap:13px;}
   .main-nav a{font-size:.8rem;}
 }
@@ -431,7 +426,6 @@ input:focus,select:focus,textarea:focus{background:#fff; box-shadow:0 0 0 4px rg
   .header-inner{min-height:72px; padding:7px 20px;}
   .header-inner{justify-content:flex-start;}
   .header-actions{margin-left:auto;}
-  .brand-wordmark{display:flex;}
   .brand{min-width:0;}
   .main-nav{justify-content:flex-start; padding-top:84px; background:#fff;}
   .main-nav a{font-size:1rem; padding:12px 4px; white-space:normal;}
@@ -442,7 +436,7 @@ input:focus,select:focus,textarea:focus{background:#fff; box-shadow:0 0 0 4px rg
   .footer-grid>div:last-child{grid-column:2/4;}
 }
 @media (max-width:700px){
-  .brand-wordmark small{display:none;}
+  .brand-logo-frame,.brand-logo-frame .brand-mark{width:118px; height:58px;}
   .header-actions{gap:7px;}
   .lang-switch button{padding:5px 8px;}
   .hero{min-height:680px;}
@@ -453,7 +447,7 @@ input:focus,select:focus,textarea:focus{background:#fff; box-shadow:0 0 0 4px rg
   .footer-grid>div:last-child{grid-column:auto;}
 }
 @media (max-width:520px){
-  .brand-wordmark{display:none;}
+  .brand-logo-frame,.brand-logo-frame .brand-mark{width:108px; height:54px;}
   .footer-grid{grid-template-columns:1fr;}
   .footer-brand,.footer-grid>div:last-child{grid-column:auto;}
   .hero-actions{display:grid; grid-template-columns:1fr; max-width:280px;}

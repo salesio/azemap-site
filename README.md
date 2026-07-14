@@ -73,7 +73,7 @@ a tradução correspondente logo a seguir em `<span class="lang-en">`.
 
 ## 5. Logótipo e identidade visual
 
-O site utiliza o logótipo oficial em `assets/images/azemap-logo.png` no cabeçalho, rodapé,
+O site utiliza o logótipo oficial transparente em `assets/images/Azemap-logo---transperant.png` no cabeçalho, rodapé,
 favicon e metadados de partilha social. A paleta visual foi alinhada com o emblema: azul e
 azul-marinho como cores principais, com laranja, vermelho e amarelo nos destaques.
 
