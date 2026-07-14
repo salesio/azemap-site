@@ -246,12 +246,36 @@
     });
   }
 
+  /* ---------- Subtle progressive motion ---------- */
+  function initMotion() {
+    var header = document.querySelector(".site-header");
+    function syncHeader() {
+      if (header) header.classList.toggle("is-scrolled", window.scrollY > 12);
+    }
+    syncHeader();
+    window.addEventListener("scroll", syncHeader, { passive: true });
+
+    if (!window.IntersectionObserver || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var targets = document.querySelectorAll("main .section > .container, main .card, main .rounded-photo");
+    targets.forEach(function (el) { el.classList.add("reveal-ready"); });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("reveal-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -24px" });
+    targets.forEach(function (el) { observer.observe(el); });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLang();
     initMobileNav();
     initForms();
     initLightbox();
     initFilterChips();
+    initMotion();
     // Footer year
     document.querySelectorAll("[data-current-year]").forEach(function (el) {
       el.textContent = new Date().getFullYear();

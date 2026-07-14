@@ -52,22 +52,20 @@ def build_header(active_key):
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="index.html">
-      {OFFICIAL_LOGO}
+      <span class="brand-crop">{OFFICIAL_LOGO}</span>
+      <span class="brand-wordmark"><strong>AZEMAP</strong><small><span class="lang-pt">Dignidade &amp; inclusão</span><span class="lang-en">Dignity &amp; inclusion</span></small></span>
     </a>
     <nav class="main-nav" aria-label="Navegação principal / Main navigation">
       <ul>
       {nav}
       </ul>
-      <div class="header-actions" style="margin-top:18px;">
-        <a class="btn btn-primary" href="apoie-nos.html"><span class="lang-pt">Apoie-nos</span><span class="lang-en">Support Us</span></a>
-      </div>
     </nav>
     <div class="header-actions">
       <div class="lang-switch" data-lang-buttons>
         <button type="button" data-lang="pt" aria-pressed="true" aria-label="Português">PT</button>
         <button type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
       </div>
-      <a class="btn btn-primary btn-primary-desktop" href="apoie-nos.html"><span class="lang-pt">Apoie-nos</span><span class="lang-en">Support Us</span></a>
+      <a class="btn btn-primary btn-primary-desktop header-cta" href="apoie-nos.html"><span class="lang-pt">Apoiar</span><span class="lang-en">Support</span><span aria-hidden="true">→</span></a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu / Open menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
       </button>
@@ -80,12 +78,13 @@ def build_header(active_key):
 FOOTER = """<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <img class="footer-logo" src="assets/images/azemap-logo.png" alt="AZEMAP">
-        <p style="max-width:34ch;">
+      <div class="footer-brand">
+        <a class="footer-brand-link" href="index.html"><span class="footer-logo-crop"><img class="footer-logo" src="assets/images/azemap-logo.png" alt="AZEMAP"></span><strong>AZEMAP</strong></a>
+        <p>
           <span class="lang-pt">Associação Zé Manuel Pinto — a defender a saúde, educação, protecção e os direitos das Pessoas com Albinismo em Tete e em Moçambique.</span>
           <span class="lang-en">Zé Manuel Pinto Association — advancing health, education, protection and rights for people with albinism in Tete and across Mozambique.</span>
         </p>
+        <a class="footer-contact" href="contacto.html"><span class="lang-pt">Fale com a nossa equipa</span><span class="lang-en">Talk to our team</span> <span aria-hidden="true">→</span></a>
         <div class="social-row" aria-label="Redes sociais / Social media">
           <!-- Social links are hidden until AZEMAP verifies and confirms each official URL (socialLinksVerified: false). -->
         </div>
