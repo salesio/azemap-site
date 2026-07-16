@@ -53,6 +53,7 @@ def build_header(active_key):
   <div class="header-inner">
     <a class="brand" href="index.html">
       <span class="brand-logo-frame">{OFFICIAL_LOGO}</span>
+      <span class="mobile-org-name">ASSOCIAÇÃO ZÉ MANUEL PINTO <strong>(AZEMAP)</strong></span>
     </a>
     <nav class="main-nav" aria-label="Navegação principal / Main navigation">
       <ul>
