@@ -32,6 +32,7 @@ Basta enviar a pasta `azemap-site/` completa.
 | `trabalho.html` | O Nosso Trabalho (as 4 áreas: Saúde, Educação, Apoio Social, Advocacia) |
 | `onde-trabalhamos.html` | Onde Trabalhamos (distritos, sede) |
 | `historias.html` | Histórias de Impacto |
+| `realizacoes.html` | Grandes Realizações e Histórias de Sucesso |
 | `noticias.html` | Notícias e Actividades (estado vazio pronto a preencher) |
 | `galeria.html` | Galeria (com lightbox acessível) |
 | `apoie-nos.html` | Apoie-nos / Donativos |

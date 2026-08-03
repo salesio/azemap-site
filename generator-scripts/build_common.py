@@ -13,6 +13,7 @@ NAV_ITEMS = [
     ("trabalho.html", "O Nosso Trabalho", "Our Work", "trabalho"),
     ("onde-trabalhamos.html", "Onde Trabalhamos", "Where We Work", "onde"),
     ("historias.html", "Histórias", "Stories", "historias"),
+    ("realizacoes.html", "Realizações", "Achievements", "realizacoes"),
     ("noticias.html", "Notícias", "News", "noticias"),
     ("galeria.html", "Galeria", "Gallery", "galeria"),
     ("parceiros.html", "Parceiros", "Partners", "parceiros"),
@@ -96,6 +97,7 @@ FOOTER = """<footer class="site-footer">
           <li><a href="sobre.html"><span class="lang-pt">Sobre Nós</span><span class="lang-en">About Us</span></a></li>
           <li><a href="trabalho.html"><span class="lang-pt">O Nosso Trabalho</span><span class="lang-en">Our Work</span></a></li>
           <li><a href="historias.html"><span class="lang-pt">Histórias de Impacto</span><span class="lang-en">Impact Stories</span></a></li>
+          <li><a href="realizacoes.html"><span class="lang-pt">Grandes Realizações</span><span class="lang-en">Key Achievements</span></a></li>
           <li><a href="transparencia.html"><span class="lang-pt">Transparência</span><span class="lang-en">Transparency</span></a></li>
           <li><a href="contacto.html"><span class="lang-pt">Contacto</span><span class="lang-en">Contact</span></a></li>
         </ul>
