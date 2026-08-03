@@ -66,12 +66,14 @@
       if (scrim) scrim.classList.remove("open");
       document.body.classList.remove("nav-open");
       toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Abrir menu / Open menu");
     }
     function openNav() {
       nav.classList.add("open");
       if (scrim) scrim.classList.add("open");
       document.body.classList.add("nav-open");
       toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Fechar menu / Close menu");
       var firstLink = nav.querySelector("a");
       if (firstLink) firstLink.focus();
     }
@@ -85,6 +87,37 @@
     });
     nav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", closeNav);
+    });
+  }
+
+  /* ---------- Explore dropdown / mobile accordion ---------- */
+  function initNavDropdown() {
+    var more = document.querySelector(".nav-more");
+    if (!more) return;
+    var button = more.querySelector(".nav-more-toggle");
+    if (!button) return;
+
+    function closeMore() {
+      more.classList.remove("open");
+      button.setAttribute("aria-expanded", "false");
+    }
+    function toggleMore() {
+      var open = more.classList.toggle("open");
+      button.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      toggleMore();
+    });
+    document.addEventListener("click", function (event) {
+      if (!more.contains(event.target)) closeMore();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeMore();
+    });
+    more.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMore);
     });
   }
 
@@ -274,6 +307,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initLang();
     initMobileNav();
+    initNavDropdown();
     initForms();
     initLightbox();
     initFilterChips();

@@ -22,8 +22,22 @@ NAV_ITEMS = [
 ]
 
 def build_nav(active_key):
-    items = "\n      ".join(nav_link(h, pt, en, active_key, k) for h, pt, en, k in NAV_ITEMS)
-    return items
+    primary_keys = {"home", "sobre", "trabalho", "realizacoes", "historias", "contacto"}
+    primary = [item for item in NAV_ITEMS if item[3] in primary_keys]
+    secondary = [item for item in NAV_ITEMS if item[3] not in primary_keys]
+    items = [nav_link(h, pt, en, active_key, k) for h, pt, en, k in primary]
+    secondary_items = "\n          ".join(nav_link(h, pt, en, active_key, k) for h, pt, en, k in secondary)
+    more_current = ' active' if any(active_key == item[3] for item in secondary) else ''
+    items.insert(-1, f'''<li class="nav-more{more_current}">
+        <button type="button" class="nav-more-toggle" aria-expanded="false" aria-controls="nav-more-menu">
+          <span><span class="lang-pt">Explorar</span><span class="lang-en">Explore</span></span>
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 7.5 5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="nav-more-menu" id="nav-more-menu">
+          {secondary_items}
+        </ul>
+      </li>''')
+    return "\n      ".join(items)
 
 def build_head(title_pt, title_en, desc_pt, desc_en, canonical):
     return f"""<head>
@@ -56,7 +70,7 @@ def build_header(active_key):
       <span class="brand-logo-frame">{OFFICIAL_LOGO}</span>
       <span class="mobile-org-name">ASSOCIAÇÃO ZÉ MANUEL PINTO <strong>(AZEMAP)</strong></span>
     </a>
-    <nav class="main-nav" aria-label="Navegação principal / Main navigation">
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal / Main navigation">
       <ul>
       {nav}
       </ul>
