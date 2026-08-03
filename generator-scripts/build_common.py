@@ -22,7 +22,7 @@ NAV_ITEMS = [
 ]
 
 def build_nav(active_key):
-    primary_keys = {"home", "sobre", "trabalho", "realizacoes", "historias", "contacto"}
+    primary_keys = {"home", "sobre", "trabalho", "realizacoes", "historias", "noticias", "galeria", "contacto"}
     primary = [item for item in NAV_ITEMS if item[3] in primary_keys]
     secondary = [item for item in NAV_ITEMS if item[3] not in primary_keys]
     items = [nav_link(h, pt, en, active_key, k) for h, pt, en, k in primary]
