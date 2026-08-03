@@ -45,14 +45,23 @@ def build_head(title_pt, title_en, desc_pt, desc_en, canonical):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title_pt} | AZEMAP</title>
 <meta name="description" content="{desc_pt}">
-<link rel="canonical" href="https://www.azemap.org/{canonical}">
+<link rel="canonical" href="https://salesio.github.io/azemap-site/{canonical}">
 <meta property="og:title" content="{title_pt} | AZEMAP">
 <meta property="og:description" content="{desc_pt}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_MZ">
+<meta property="og:site_name" content="AZEMAP — Associação Zé Manuel Pinto">
+<meta property="og:url" content="https://salesio.github.io/azemap-site/{canonical}">
 <meta name="theme-color" content="#084D75">
 <link rel="icon" type="image/png" href="assets/images/Azemap-logo---transperant.png">
-<meta property="og:image" content="https://www.azemap.org/assets/images/Azemap-logo---transperant.png">
+<meta property="og:image" content="https://salesio.github.io/azemap-site/assets/images/azemap-social-preview-2026.jpg">
+<meta property="og:image:secure_url" content="https://salesio.github.io/azemap-site/assets/images/azemap-social-preview-2026.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="AZEMAP formando comités distritais de protecção e promoção dos direitos das Pessoas com Albinismo em Tete">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://salesio.github.io/azemap-site/assets/images/azemap-social-preview-2026.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
@@ -156,14 +165,23 @@ def page(title_pt, title_en, desc_pt, desc_en, canonical, active_key, body_html,
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title_pt} | AZEMAP</title>
 <meta name="description" content="{desc_pt}">
-<link rel="canonical" href="https://www.azemap.org/{canonical}">
+<link rel="canonical" href="https://salesio.github.io/azemap-site/{canonical}">
 <meta property="og:title" content="{title_pt} | AZEMAP">
 <meta property="og:description" content="{desc_pt}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_MZ">
+<meta property="og:site_name" content="AZEMAP — Associação Zé Manuel Pinto">
+<meta property="og:url" content="https://salesio.github.io/azemap-site/{canonical}">
 <meta name="theme-color" content="#084D75">
 <link rel="icon" type="image/png" href="assets/images/Azemap-logo---transperant.png">
-<meta property="og:image" content="https://www.azemap.org/assets/images/Azemap-logo---transperant.png">
+<meta property="og:image" content="https://salesio.github.io/azemap-site/assets/images/azemap-social-preview-2026.jpg">
+<meta property="og:image:secure_url" content="https://salesio.github.io/azemap-site/assets/images/azemap-social-preview-2026.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="AZEMAP formando comités distritais de protecção e promoção dos direitos das Pessoas com Albinismo em Tete">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://salesio.github.io/azemap-site/assets/images/azemap-social-preview-2026.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
