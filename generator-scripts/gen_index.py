@@ -168,12 +168,14 @@ BODY = f"""
 <section class="section section-alt">
   <div class="container text-center">
     <p class="eyebrow" style="justify-content:center;"><span class="lang-pt">Parceiros</span><span class="lang-en">Partners</span></p>
-    <h2><span class="lang-pt">Organizações que caminham connosco</span><span class="lang-en">Organisations walking with us</span></h2>
-    <div class="grid grid-4" style="margin-top:30px;">
+    <h2><span class="lang-pt">Uma rede que fortalece o nosso impacto</span><span class="lang-en">A network strengthening our impact</span></h2>
+    <div class="grid grid-3" style="margin-top:30px;">
+      <div class="card partner-card"><span class="lang-pt">Governo Provincial e Governos Distritais de Tete</span><span class="lang-en">Tete Provincial and District Governments</span></div>
       <div class="card partner-card">Africa Directo</div>
-      <div class="card partner-card"><span class="lang-pt">Serviços Provinciais de Saúde de Tete</span><span class="lang-en">Tete Provincial Health Services</span></div>
+      <div class="card partner-card">Lilian Foundation</div>
       <div class="card partner-card">Africa Albinism Network</div>
-      <div class="card partner-card">Human Rights Watch</div>
+      <div class="card partner-card partner-card-logo"><span class="fdl-logo-frame"><img class="fdl-logo-rotated" src="assets/images/partner-fdl-original.jpeg" alt="FDL — Fundação para o Desenvolvimento Local e Inclusivo"></span><span>FDL</span></div>
+      <div class="card partner-card">UNESCO</div>
     </div>
     <p style="font-size:.85rem; margin-top:22px;">
       <span class="lang-pt">A apresentação de uma organização nesta secção não implica necessariamente uma parceria actualmente activa. A lista será actualizada pela AZEMAP.</span>

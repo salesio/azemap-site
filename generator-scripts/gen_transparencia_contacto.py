@@ -31,7 +31,7 @@ TRANS_BODY = f"""
       </div>
       <div class="card">
         <h3><span class="lang-pt">Governação</span><span class="lang-en">Governance</span></h3>
-        <p><span class="lang-pt">Assembleia Geral, Conselho de Administração e Conselho Fiscal — ver detalhes na página Sobre Nós.</span>
+        <p><span class="lang-pt">Assembleia Geral, Conselho de Direcção e Conselho Fiscal — ver detalhes na página Sobre Nós.</span>
         <span class="lang-en">General Assembly, Board of Directors and Supervisory Board — see details on the About Us page.</span></p>
       </div>
     </div>

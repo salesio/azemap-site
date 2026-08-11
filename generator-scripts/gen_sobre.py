@@ -3,40 +3,13 @@ import sys
 sys.path.insert(0, "/home/claude")
 from build_common import page
 
-def team_card(initials, name, role_pt, role_en, bio_pt="", bio_en=""):
-    bio_html = ""
-    if bio_pt:
-        bio_html = f'<p style="font-size:.9rem;"><span class="lang-pt">{bio_pt}</span><span class="lang-en">{bio_en}</span></p>'
-    return f"""<div class="card team-card">
-        <div class="avatar-initials">{initials}</div>
-        <h3>{name}</h3>
-        <p class="team-role"><span class="lang-pt">{role_pt}</span><span class="lang-en">{role_en}</span></p>
-        {bio_html}
-      </div>"""
-
-TEAM_LEAD = [
-    team_card("FP", "Flávia Pinto", "Presidente", "President",
-        "Economista, jurista e activista de direitos humanos. Fundou a AZEMAP em memória do seu pai, Zé Manuel Pinto.",
-        "Economist, lawyer and human rights activist. Founded AZEMAP in memory of her father, Zé Manuel Pinto."),
-    team_card("QC", "Quinito Changa", "Vice-Presidente", "Vice-President"),
-    team_card("HC", "Helder Claver", "Administrador de Projectos", "Projects Administrator"),
-]
-
-TEAM_OTHERS = [
-    ("AP", "Ângelo Ponte"), ("MM", "Manuel Mafunga"), ("RA", "Remane António"),
-    ("MD", "Mónica Dimande"), ("EM", "Eufrásio Manuel"), ("GX", "Gonçalo Xavier"),
-]
-team_others_html = "\n      ".join(
-    f'<div class="card team-card"><div class="avatar-initials">{i}</div><h3>{n}</h3></div>' for i, n in TEAM_OTHERS
-)
-
 BODY = f"""
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow" style="color:#F4C542;"><span class="lang-pt">Sobre Nós</span><span class="lang-en">About Us</span></p>
     <h1><span class="lang-pt">Uma associação nascida da dor, transformada em esperança</span><span class="lang-en">An association born of pain, transformed into hope</span></h1>
-    <p><span class="lang-pt">A AZEMAP nasceu em 2015, após a morte de Zé Manuel Pinto, pai de Flávia Pinto e Pessoa com Albinismo. A experiência familiar revelou as dificuldades enfrentadas diariamente pelas Pessoas com Albinismo e despertou a necessidade de criar uma organização dedicada à dignidade, protecção, inclusão e defesa dos seus direitos.</span>
-    <span class="lang-en">AZEMAP was founded in 2015, after the death of Zé Manuel Pinto — Flávia Pinto's father and a person with albinism. That family experience revealed the difficulties faced daily by people with albinism and sparked the need to create an organisation dedicated to dignity, protection, inclusion and the defence of their rights.</span></p>
+    <p><span class="lang-pt">A AZEMAP nasceu em 2015, após a morte de Zé Manuel Pinto, pessoa com albinismo. A experiência familiar revelou as dificuldades enfrentadas diariamente pelas Pessoas com Albinismo e despertou a necessidade de criar uma organização dedicada à dignidade, protecção, inclusão e defesa dos seus direitos.</span>
+    <span class="lang-en">AZEMAP was founded in 2015, after the death of Zé Manuel Pinto, a person with albinism. That family experience revealed the difficulties faced daily by people with albinism and sparked the need to create an organisation dedicated to dignity, protection, inclusion and the defence of their rights.</span></p>
   </div>
 </section>
 
@@ -77,41 +50,12 @@ BODY = f"""
   </div>
 </section>
 
-<section class="section">
-  <div class="container split">
-    <div class="rounded-photo">
-      <img src="assets/images/apoio-comunitario.jpg" alt="Uma beneficiária da AZEMAP com uma colaboradora da associação" style="aspect-ratio:4/5; object-position:50% 15%;">
-    </div>
-    <div>
-      <p class="eyebrow"><span class="lang-pt">Mensagem da Presidente</span><span class="lang-en">Message from the President</span></p>
-      <h2><span class="lang-pt">Flávia Pinto</span></h2>
-      <blockquote style="border-left:4px solid var(--orange-600); padding-left:20px; font-style:italic; color:var(--ink-600); font-size:1.05rem;">
-        <span class="lang-pt">&ldquo;Continuaremos a trabalhar para que nenhuma Pessoa com Albinismo seja privada de saúde, educação, protecção, respeito ou oportunidades por causa da sua condição.&rdquo;</span>
-        <span class="lang-en">&ldquo;We will keep working so that no person with albinism is denied health, education, protection, respect or opportunity because of their condition.&rdquo;</span>
-      </blockquote>
-      <p class="hint"><span class="lang-pt">Mensagem em fase de aprovação pela Presidente.</span><span class="lang-en">Draft message, pending the President's approval.</span></p>
-    </div>
-  </div>
-</section>
-
 <section class="section section-alt">
-  <div class="container">
-    <div class="text-center center-col" style="margin-bottom:40px;">
-      <p class="eyebrow" style="justify-content:center;"><span class="lang-pt">Liderança</span><span class="lang-en">Leadership</span></p>
-      <h2><span class="lang-pt">A equipa da AZEMAP</span><span class="lang-en">The AZEMAP team</span></h2>
-    </div>
-    <div class="grid grid-3">
-      {"".join(TEAM_LEAD)}
-    </div>
-    <hr class="divider">
-    <p class="text-center hint" style="margin-bottom:20px;"><span class="lang-pt">Colaboradores e membros da equipa</span><span class="lang-en">Team members and collaborators</span></p>
-    <div class="grid grid-4">
-      {team_others_html}
-    </div>
-    <p class="text-center hint" style="margin-top:24px;">
-      <span class="lang-pt">A AZEMAP conta ainda com pontos focais nos distritos da Província de Tete.</span>
-      <span class="lang-en">AZEMAP is also supported by district focal points across Tete Province.</span>
-    </p>
+  <div class="container center-col quote-block">
+    <blockquote style="border-left:4px solid var(--orange-600); padding-left:22px; margin:0; color:var(--ink-700); font-size:clamp(1.2rem, 2vw, 1.7rem); line-height:1.5; font-weight:700; font-family:var(--font-display); text-align:left; max-width:980px;">
+      <span class="lang-pt">&ldquo;Continuaremos a trabalhar para que nenhuma Pessoa com Albinismo seja privada de saúde, educação, protecção, respeito ou oportunidades por causa da sua condição.&rdquo;</span>
+      <span class="lang-en">&ldquo;We will continue to work so that no person with albinism is deprived of health, education, protection, respect or opportunities because of their condition.&rdquo;</span>
+    </blockquote>
   </div>
 </section>
 
@@ -128,7 +72,7 @@ BODY = f"""
         <span class="lang-en">AZEMAP's supreme body, made up of all members, responsible for electing the other bodies and approving annual plans and accounts.</span></p>
       </div>
       <div class="card">
-        <h3><span class="lang-pt">Conselho de Administração</span><span class="lang-en">Board of Directors</span></h3>
+        <h3><span class="lang-pt">Conselho de Direcção</span><span class="lang-en">Board of Directors</span></h3>
         <p><span class="lang-pt">O órgão executivo, responsável pela gestão diária e pela representação da associação.</span>
         <span class="lang-en">The executive body, responsible for day-to-day management and representing the association.</span></p>
       </div>
@@ -145,8 +89,8 @@ BODY = f"""
 html = page(
     title_pt="Sobre Nós",
     title_en="About Us",
-    desc_pt="Conheça a história da AZEMAP, nascida em 2015 em memória de Zé Manuel Pinto, a sua missão, liderança e governação.",
-    desc_en="Learn about AZEMAP's history, founded in 2015 in memory of Zé Manuel Pinto, its mission, leadership and governance.",
+    desc_pt="Conheça a história da AZEMAP, nascida em 2015 em memória de Zé Manuel Pinto, a sua missão e governação.",
+    desc_en="Learn about AZEMAP's history, founded in 2015 in memory of Zé Manuel Pinto, its mission and governance.",
     canonical="sobre.html",
     active_key="sobre",
     body_html=BODY,

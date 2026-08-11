@@ -14,6 +14,11 @@ WAYS = [
     ("Tornar-se parceiro institucional", "Become an institutional partner"),
     ("Oferecer serviços profissionais", "Offer professional services"),
     ("Voluntariado", "Volunteering"),
+    ("Reforço de capacidades institucionais em direitos humanos", "Institutional capacity-building in human rights"),
+    ("Protecção e defesa das Pessoas com Albinismo", "Protection and advocacy for people with albinism"),
+    ("Campanhas de consciencialização comunitária", "Community awareness campaigns"),
+    ("Formação de comités locais de protecção", "Training local protection committees"),
+    ("Identificação e registo de beneficiários", "Beneficiary identification and registration"),
 ]
 way_cards = "\n      ".join(
     f'<div class="card" style="padding:20px;"><h3 style="font-size:1rem;"><span class="lang-pt">{pt}</span><span class="lang-en">{en}</span></h3></div>'
@@ -41,6 +46,10 @@ APOIO_BODY = f"""
 
 <section class="section">
   <div class="container">
+    <div class="text-center center-col" style="margin-bottom:36px;">
+      <p class="eyebrow" style="justify-content:center;"><span class="lang-pt">Áreas de apoio</span><span class="lang-en">Support areas</span></p>
+      <h2><span class="lang-pt">Escolha onde a sua contribuição pode fazer diferença</span><span class="lang-en">Choose where your contribution can make a difference</span></h2>
+    </div>
     <div class="grid grid-3">
       {way_cards}
     </div>
@@ -133,6 +142,11 @@ AREAS = [
     ("Apoio jurídico", "Legal support"), ("Angariação de fundos", "Fundraising"),
     ("Administração", "Administration"), ("Recolha de dados", "Data collection"),
     ("Apoio a eventos", "Event support"), ("Comunicação digital", "Digital communication"),
+    ("Reforço de capacidades locais", "Local capacity-building"),
+    ("Integração e articulação sectorial", "Sector integration and coordination"),
+    ("Campanhas de consciencialização", "Awareness campaigns"),
+    ("Protecção e defesa de direitos humanos", "Human-rights protection and advocacy"),
+    ("Formação de comités comunitários", "Community committee training"),
 ]
 area_opts_pt = "\n            ".join(f'<option value="{pt}">{pt}</option>' for pt, en in AREAS)
 area_opts_en = "\n            ".join(f'<option value="{pt}">{en}</option>' for pt, en in AREAS)
@@ -152,6 +166,7 @@ VOL_BODY = f"""
   <div class="container text-center">
     <p class="eyebrow" style="justify-content:center;"><span class="lang-pt">Áreas de voluntariado</span><span class="lang-en">Volunteer areas</span></p>
     <div style="margin-top:14px;">{area_tags}</div>
+    <p class="max-prose" style="margin:28px auto 0;"><span class="lang-pt">Também acolhemos profissionais e organizações capazes de reforçar capacidades locais, facilitar a articulação entre sectores e desenvolver campanhas comunitárias sobre direitos humanos, protecção e defesa das Pessoas com Albinismo.</span><span class="lang-en">We also welcome professionals and organisations able to strengthen local capacity, support coordination across sectors and develop community campaigns on human rights, protection and advocacy for people with albinism.</span></p>
   </div>
 </section>
 
@@ -234,14 +249,28 @@ with open("voluntariado.html", "w", encoding="utf-8") as f:
 print("voluntariado.html written:", len(html))
 
 # ---------------- PARCEIROS ----------------
-PARTNERS = ["Africa Directo", "Serviços Provinciais de Saúde de Tete|Tete Provincial Health Services",
-            "Africa Albinism Network", "Human Rights Watch", "Amor à Vida"]
+GOVERNMENT_PARTNERS = [
+    "Governo Provincial e Governos Distritais de Tete|Tete Provincial and District Governments",
+    "Serviços Provinciais de Saúde, Educação e Justiça|Provincial Services for Health, Education and Justice",
+    "Ministério da Saúde|Ministry of Health",
+]
+INSTITUTIONAL_PARTNERS = [
+    "Lilian Foundation", "Human Rights Watch (HRW)", "África Directo", "FAMOD",
+    "Africa Albinism Network", "UNESCO",
+]
+
 def partner_card(p):
     if "|" in p:
-        pt, en = p.split("|")
+        pt, en = p.split("|", 1)
         return f'<div class="card partner-card"><span class="lang-pt">{pt}</span><span class="lang-en">{en}</span></div>'
     return f'<div class="card partner-card">{p}</div>'
-partners_html = "\n      ".join(partner_card(p) for p in PARTNERS)
+
+government_partners_html = "\n      ".join(partner_card(p) for p in GOVERNMENT_PARTNERS)
+institutional_partners_html = "\n      ".join(partner_card(p) for p in INSTITUTIONAL_PARTNERS)
+fdl_card = '''<div class="card partner-card partner-card-logo">
+        <span class="fdl-logo-frame"><img class="fdl-logo-rotated" src="assets/images/partner-fdl-original.jpeg" alt="FDL — Fundação para o Desenvolvimento Local e Inclusivo"></span>
+        <span><span class="lang-pt">Fundação para o Desenvolvimento Local e Inclusivo</span><span class="lang-en">Foundation for Local and Inclusive Development</span></span>
+      </div>'''
 
 PART_BODY = f"""
 <section class="page-hero">
@@ -255,8 +284,20 @@ PART_BODY = f"""
 
 <section class="section">
   <div class="container">
+    <div class="partner-group-heading">
+      <p class="eyebrow"><span class="lang-pt">Sector público</span><span class="lang-en">Public sector</span></p>
+      <h2><span class="lang-pt">Parceiros governamentais</span><span class="lang-en">Government partners</span></h2>
+    </div>
     <div class="grid grid-3">
-      {partners_html}
+      {government_partners_html}
+    </div>
+    <div class="partner-group-heading partner-group-heading-spaced">
+      <p class="eyebrow"><span class="lang-pt">Cooperação</span><span class="lang-en">Cooperation</span></p>
+      <h2><span class="lang-pt">Parceiros nacionais e internacionais</span><span class="lang-en">National and international partners</span></h2>
+    </div>
+    <div class="grid grid-3">
+      {institutional_partners_html}
+      {fdl_card}
     </div>
     <div class="notice notice-info" style="margin-top:34px;">
       <span class="lang-pt">A apresentação de uma organização nesta secção não implica necessariamente uma parceria actualmente activa. A lista será actualizada pela AZEMAP. Os logótipos apenas serão apresentados quando existir ficheiro aprovado e autorização de utilização.</span>

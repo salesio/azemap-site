@@ -113,8 +113,7 @@ marcadas como pendentes até serem fornecidas:
 - [ ] Confirmação da cobertura activa em todos os distritos de Tete
 - [ ] Links de Facebook / Instagram / YouTube / LinkedIn (ficam ocultos até serem confirmados)
 - [ ] Relatórios de actividades e resumos financeiros (secção de Transparência)
-- [ ] Logótipos dos parceiros (nomes aparecem em texto até haver ficheiro aprovado)
-- [ ] Fotografias e biografias da restante equipa (usa iniciais como marcador temporário)
+- [ ] Restantes logótipos dos parceiros (a FDL já possui ficheiro aprovado no site)
 
 ## 8. Imagens e privacidade
 
@@ -133,10 +132,8 @@ de base para escrever as três histórias de impacto, tal como pediu.
 
 ## 10. Próximos passos recomendados antes do lançamento
 
-1. Rever todos os textos com a Presidente (Flávia Pinto), especialmente a mensagem
-   presidencial em `sobre.html`, que está marcada como rascunho.
-2. Confirmar e substituir o logótipo temporário.
-3. Decidir e configurar um serviço de envio de formulários.
-4. Publicar o site num domínio (ex.: `www.azemap.org`) e actualizar os `<link rel="canonical">`
-   em cada página, hoje apontados para esse domínio como referência.
-5. Confirmar os dados para donativos antes de anunciar a secção "Apoie-nos" publicamente.
+1. Rever periodicamente os textos institucionais e a lista de parceiros.
+2. Decidir e configurar um serviço de envio de formulários.
+3. Ao adoptar um domínio próprio (ex.: `www.azemap.org`), actualizar os `<link rel="canonical">`
+   actualmente apontados para o endereço do site no GitHub Pages.
+4. Confirmar os dados para donativos antes de anunciar a secção "Apoie-nos" publicamente.

@@ -216,6 +216,13 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .team-role{color:var(--orange-600); font-weight:700; font-size:.86rem; margin-bottom:4px;}
 
 .partner-card{text-align:center; padding:26px 18px; font-family:var(--font-display); font-weight:700; color:var(--teal-800);}
+.partner-card-logo{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;}
+.partner-card-logo img{width:min(100%,210px); height:88px; object-fit:contain;}
+.partner-card-logo span{font-size:.82rem; line-height:1.35;}
+.fdl-logo-frame{display:flex; width:190px; height:96px; align-items:center; justify-content:center; overflow:hidden;}
+.partner-card-logo .fdl-logo-rotated{width:92px; height:auto; max-width:none; transform:rotate(-90deg); object-fit:initial;}
+.partner-group-heading{max-width:760px; margin-bottom:24px;}
+.partner-group-heading-spaced{margin-top:58px;}
 
 /* ---------- Timeline ---------- */
 .timeline{position:relative; margin-left:8px; padding-left:32px; border-left:3px solid var(--line);}
